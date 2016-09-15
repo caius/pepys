@@ -2,18 +2,15 @@ require "spec_helper"
 require "stringio"
 
 describe Pepys do
-  it "has a version number" do
-    expect(Pepys::VERSION).not_to be nil
-  end
-
   let(:fakeio) { StringIO.new }
-  subject(:pepys) { Pepys::Logger.new("bunion", fakeio) }
+  let(:progname) { "bunion" }
+  subject(:pepys) { Pepys::Logger.new(progname, fakeio) }
 
   Pepys::Formatter::LEVEL_MAPPINGS.each do |level_name, level|
     it "logs #{level_name} messages to io" do
       pepys.public_send(level_name.downcase, "ZOMGWTFBBQ")
 
-      expect(JSON.parse(fakeio.string)).to eq(loghash("ZOMGWTFBBQ", level, "bunion"))
+      expect(JSON.parse(fakeio.string)).to eq(loghash("ZOMGWTFBBQ", level, progname))
     end
   end
 

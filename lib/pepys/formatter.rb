@@ -1,13 +1,15 @@
+require "json"
+
 module Pepys
   class Formatter
     LEVEL_MAPPINGS = {
-      "FATAL" => 60,
-      "ERROR" => 50,
-      "WARN"  => 40,
-      "INFO"  => 30,
-      "DEBUG" => 20,
+      "FATAL".freeze => 60,
+      "ERROR".freeze => 50,
+      "WARN" .freeze => 40,
+      "INFO" .freeze => 30,
+      "DEBUG".freeze => 20,
       # "TRACE" => 10,
-    }
+    }.freeze
 
     FORMAT_VERSION = 0
 

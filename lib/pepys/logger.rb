@@ -1,6 +1,5 @@
-require "socket"
 require "logger"
-require "json"
+require "socket"
 require "pepys/formatter"
 
 module Pepys
