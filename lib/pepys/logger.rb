@@ -5,7 +5,7 @@ require "pepys/formatter"
 
 module Pepys
   class Logger
-    REFUSE_TO_FORWARD = %i(:formatter=)
+    REFUSE_TO_FORWARD = %i(formatter=)
 
     attr_reader :hostname, :program_name
 

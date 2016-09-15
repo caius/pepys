@@ -18,9 +18,7 @@ describe Pepys do
   end
 
   it "refuses to forward #formatter= message" do
-    # expect {
-      pepys.formatter = -> (*_) { "Uh oh" }
-    # }.to raise_error(NoMethodError)
+    expect { pepys.formatter = -> (*_) { "Uh oh" } }.to raise_error(NoMethodError)
   end
 
   private
