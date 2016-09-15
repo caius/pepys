@@ -1,6 +1,6 @@
 # pepys
 
-Ruby Logger outputting JSON logs
+Ruby Logger outputting JSON logs. Inspired by & compatible with [node-bunyan](https://github.com/trentm/node-bunyan)
 
 ## Installation
 
