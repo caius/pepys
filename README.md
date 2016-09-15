@@ -20,7 +20,13 @@ Or install it yourself as:
 
 ## Usage
 
-TODO: Write usage instructions here
+```ruby
+require "pepys"
+
+logger = Pepys::Logger.new("example_script", STDOUT)
+logger.info "Example script started"
+logger.fatal "Example script aborted due to lack of code"
+```
 
 ## Development
 
