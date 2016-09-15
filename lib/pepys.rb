@@ -1,5 +1,6 @@
 require "pepys/version"
+require "pepys/logger"
 
 module Pepys
-  # Your code goes here...
+  LOG_FORMAT_VERSION = 0
 end
