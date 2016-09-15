@@ -26,6 +26,9 @@ require "pepys"
 logger = Pepys::Logger.new("example_script", STDOUT)
 logger.info "Example script started"
 logger.fatal "Example script aborted due to lack of code"
+# >> {"name":"example_script","pid":36279,"hostname":"Thrax","level":30,"time":"2016-09-15T22:48:30Z","msg":"Example script started","v":0}
+# >> {"name":"example_script","pid":36279,"hostname":"Thrax","level":60,"time":"2016-09-15T22:48:30Z","msg":"Example script aborted due to lack of code","v":0}
+
 ```
 
 ## Development
