@@ -30,7 +30,7 @@ module Pepys
       # Only override the default name if we have a value
       data[:name] = name if name
 
-      JSON.dump(data)
+      JSON.dump(data) + "\n"
     end
 
     private

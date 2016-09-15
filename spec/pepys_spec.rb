@@ -14,6 +14,13 @@ describe Pepys do
     end
   end
 
+  it "outputs multiple logs on new lines" do
+    pepys.info "zomgwtf"
+    pepys.info "zomgbbq"
+
+    expect(fakeio.string.split.size).to eq(2)
+  end
+
   it "refuses to forward #formatter= message" do
     expect { pepys.formatter = -> (*_) { "Uh oh" } }.to raise_error(NoMethodError)
   end
